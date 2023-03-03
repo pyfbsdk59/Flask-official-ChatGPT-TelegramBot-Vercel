@@ -1,6 +1,11 @@
 # Flask-official-ChatGPT-TelegramBot-Vercel
 # 一個使用Flask框架和official ChatGPT/GPT3.5 turbo api創造TelegramBot，快速建置於平台Vercel。
 
+
+
+## [TelegramBot Vercel GPT3版本部屬](https://github.com/pyfbsdk59/Flask-ChatGPT-TelegramBot-Vercel)
+
+
 ## [TelegramBot Render GPT3版本部屬](https://github.com/pyfbsdk59/Flask-ChatGPT-TelegramBot-Render)
 
 <div align="center">
