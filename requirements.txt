@@ -1,0 +1,14 @@
+certifi
+chardet
+click
+flask
+future
+idna
+itsdangerous
+jinja2
+markupsafe
+python-telegram-bot==10.1.0
+requests
+urllib3
+werkzeug
+openai==0.27.0
