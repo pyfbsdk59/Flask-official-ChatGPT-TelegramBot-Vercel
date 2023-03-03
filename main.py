@@ -25,8 +25,8 @@ class ChatGPT:
         
         self.messages = conversation
         self.model = os.getenv("OPENAI_MODEL", default = "gpt-3.5-turbo")
-        self.temperature = float(os.getenv("OPENAI_TEMPERATURE", default = 2))
-        self.max_tokens = int(os.getenv("OPENAI_MAX_TOKENS", default = 240))
+        #self.temperature = float(os.getenv("OPENAI_TEMPERATURE", default = 2))
+        #self.max_tokens = int(os.getenv("OPENAI_MAX_TOKENS", default = 240))
 
 
     def get_response(self, user_input):
@@ -36,10 +36,10 @@ class ChatGPT:
         response = openai.ChatCompletion.create(
 	            model=self.model,
                 messages = self.conversation
-	            temperature=self.temperature,
-	            frequency_penalty=self.frequency_penalty,
-	            presence_penalty=self.presence_penalty,
-	            max_tokens=self.max_tokens
+	            #temperature=self.temperature,
+	            #frequency_penalty=self.frequency_penalty,
+	            #presence_penalty=self.presence_penalty,
+	            #max_tokens=self.max_tokens
                 )
 
         conversation.append({"role": "assistant", "content": response['choices'][0]['message']['content']})
