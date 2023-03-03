@@ -13,7 +13,6 @@ import openai
 	
 openai.api_key = os.getenv("OPENAI_API_KEY") 
 
-
 chat_language = os.getenv("INIT_LANGUAGE", default = "zh") #amend here to change your preset language
 	
 conversation = []
@@ -25,8 +24,7 @@ class ChatGPT:
         
         self.messages = conversation
         self.model = os.getenv("OPENAI_MODEL", default = "gpt-3.5-turbo")
-        #self.temperature = float(os.getenv("OPENAI_TEMPERATURE", default = 2))
-        #self.max_tokens = int(os.getenv("OPENAI_MAX_TOKENS", default = 240))
+
 
 
     def get_response(self, user_input):
@@ -36,10 +34,7 @@ class ChatGPT:
         response = openai.ChatCompletion.create(
 	            model=self.model,
                 messages = self.messages
-	            #temperature=self.temperature,
-	            #frequency_penalty=self.frequency_penalty,
-	            #presence_penalty=self.presence_penalty,
-	            #max_tokens=self.max_tokens
+
                 )
 
         conversation.append({"role": "assistant", "content": response['choices'][0]['message']['content']})
@@ -47,8 +42,7 @@ class ChatGPT:
         print("AI回答內容：")        
         print(response['choices'][0]['message']['content'].strip())
 
-        #print("AI原始回覆資料內容：")      
-        #print(response)
+
         
         return response['choices'][0]['message']['content'].strip()
 	
